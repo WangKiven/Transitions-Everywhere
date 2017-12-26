@@ -1,3 +1,19 @@
+/*
+ * Copyright (C) 2014 Andrey Kulikov (andkulikov@gmail.com)
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 package com.transitionseverywhere.utils;
 
 import android.annotation.TargetApi;
@@ -5,7 +21,6 @@ import android.graphics.Matrix;
 import android.graphics.Rect;
 import android.os.Build.VERSION;
 import android.os.Build.VERSION_CODES;
-import android.util.Property;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -56,14 +71,6 @@ public class ViewUtils {
             return (String) v.getTag(R.id.transitionName);
         }
 
-        public void setTransitionAlpha(View v, float alpha) {
-            v.setAlpha(alpha);
-        }
-
-        public Property<View, Float> getAlphaProperty() {
-            return View.ALPHA;
-        }
-
         public void setTranslationZ(View view, float z) {
             // do nothing
         }
@@ -93,7 +100,7 @@ public class ViewUtils {
         }
 
         public Object getWindowId(View view) {
-            return null;
+            return view.getWindowToken();
         }
 
         public boolean isRtl(View view) {
@@ -206,14 +213,6 @@ public class ViewUtils {
 
     public static Rect getClipBounds(View v) {
         return IMPL.getClipBounds(v);
-    }
-
-    public static void setTransitionAlpha(View v, float alpha) {
-        IMPL.setTransitionAlpha(v, alpha);
-    }
-
-    public static Property<View, Float> getAlphaProperty() {
-        return IMPL.getAlphaProperty();
     }
 
     public static void setTransitionName(View v, String name) {

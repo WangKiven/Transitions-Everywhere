@@ -18,6 +18,7 @@
 -->
 <resources>
     <item type="id" name="current_scene"/>
+    <item type="id" name="runningTransitions"/>
     <item type="id" name="transitionPosition" />
     <item type="id" name="transitionTransform" />
     <item type="id" name="transitionName" />
@@ -26,4 +27,5 @@
     <item type="id" name="scene_layoutid_cache"/>
     <item type="id" name="group_layouttransition_backup"/>
     <item type="id" name="overlay_layout_params_backup"/>
+    <item type="id" name="overlay_view"/>
 </resources>
