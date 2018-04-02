@@ -8,7 +8,7 @@ android {
         minSdkVersion parent.ext.minSdkVersion
         targetSdkVersion parent.ext.targetSdkVersion
         versionCode 1
-        versionName parent.ext.versionName
+        versionName "1.0"
     }
 }
 
