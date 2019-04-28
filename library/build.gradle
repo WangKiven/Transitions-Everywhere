@@ -13,8 +13,8 @@ android {
 }
 
 dependencies {
-    implementation ('com.android.support:support-annotations:24.2.0')
-    implementation ('com.android.support:support-compat:24.2.0')
+    implementation ("com.android.support:support-annotations:${parent.ext.libraryVersion}")
+    implementation ("com.android.support:support-compat:${parent.ext.libraryVersion}")
 }
 
 //apply from: rootProject.file('library/gradle-mvn-push.gradle')
